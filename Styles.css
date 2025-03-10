@@ -6,7 +6,12 @@ body {
     background-color: #bfc9d5;
 }
 
-/* Header */
+/* Rest */
+header {background-color: #f4c6c3;
+    color: #b8a1d9;
+    padding: 20px;
+    text-align: center;
+}
 h1 {
     background-color: #f4c6c3;
     color: #b8a1d9;
@@ -66,4 +71,53 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #f4a7c0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Navigation Links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    background-color: #e6739f;
+    border-radius: 5px;
+}
+
+/* Active Tab */
+.navbar a.active {
+    background-color: #8ca3dd;
+    border-radius: 5px;
+}
+/* Aside */
+aside {
+    width: 300px;
+    padding: 10px;
+    background-color: #ddafef;
+    border-left: 4px solid #f4a7c0;
+    text-align: center;
+    margin-left: 20px;
+}
+aside img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+aside p {
+    font-size: 14px;
+    color: #020202;
+    margin-top: 10px;
 }
