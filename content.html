@@ -1,7 +1,7 @@
 <html>
 <head>
 <link
-rel="stylesheet" href="style.css"> </link>
+rel="stylesheet" href="styles.css"> </link>
 <title>Bunny Daycare services page</title>
 </head>
 <header>
@@ -50,5 +50,31 @@ brushing, nail trimming, and haircuts to keep your pet looking great.</td>
 <li>Ferrets
 </นไ>
 </body>
+<h3>Schedule your pet's next visit</h3>
+<p>Select a location</p>
+<script> <form id="form1">
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option1" /> <label for="option1">Columbus, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option2"/> <label for="option2">Delaware, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option3"/> <label for="option3">Cleveland, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Mansfield, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Dayton, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Toledo, OH</label><br>
+  <input type="submit" value="Submit">
+  </form>
+  <p id="answer"></p>
+               
+  </script>
+  <p> Select an appointment time </p>
+  <input id="userInput"> <br><br>
+<button onclick="myFunction()">Submit</button>
+<p id="message"></p>
+    <script>function myFunction() {
+        let userInput = document.querySelector ("#userInput");
+        let message = document.querySelector ("#message");
+        message.innerHTML = "Thank your for entering our monthly drawing " + userInput.value;
+    }
+                </script>
+
+
 <footer> <i>Thanks for visiting our site! </i></footer>
 </html>
