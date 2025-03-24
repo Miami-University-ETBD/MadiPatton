@@ -2,6 +2,23 @@
   <head>
     <link rel="stylesheet" href="styles.css"> </link>
     <title>Bunny Daycare</title>
+    <style>
+      .container {
+          display: flex;
+          width: 100%;
+          height: 100vh;
+      }
+      .content {
+          width: 70%;
+          padding: 20px;
+          background-color: #d9afff;
+      }
+      .aside {
+          width: 30%;
+          padding: 20px;
+          background-color: #abbaff;
+      }
+  </style>
   </head>
   <header>
     <div class="navbar">
@@ -14,18 +31,23 @@
     </header>
     
     <body>
-      <aside>
-        <div class="image-container">
-          <img src="images/Bunnies.jpg" alt="bunnies" class="shadowed" class="bordered">
-          </div>
-    </aside>
+      
     <h2>
       We are here for you and your fuzzy friends!
     </h2>
     <blockquote>
       Everyone needs a vacation, including your precious pets! No need to worry about your pet on your next buisness trip or vacation. Not matter what your plans are, we are open <strong>24 hours a day, 365 days a year.</strong> </Blockquote>
-      <p>Our facilities, staff, and on site veterinarian guarantee the saftey and comfort of your pet.</p>
-    <h3> We take care of more little friends than bunnies!
+      <div class="container">
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>Our facilities, staff, and on site veterinarian guarantee the saftey and comfort of your pet. Bunny Daycare is here for customers who want to ensure their pets receive proper care, attention, and a safe environment while they are away. Small pets such as rebits, hampsters, gueina pigs, and more require specialized care, including a proper diet, exercise, and social interaction, which can be difficult for busy pet owners to manage. Bunny Daycare is well-run and provides a stress-free space where pets can play, socialize, and be monitored by trained caregivers. This gives customers peace of mind knowing their furry companions are in good hands. Additionally, Bunny Daycare services help educate owners on proper rabbit care and offer a convenient solution for vacations, work commitments, or emergencies. By offering a nurturing and secure space, Bunny Daycare facilities enhance the overall well-being of pets while giving owners confidence in their safety and happiness.</p>
+          </div>
+          <aside class="aside">
+            <div class="image-container">
+              <img src="images/Bunnies.jpg" alt="bunnies" class="shadowed" class="bordered">
+              </div></aside>
+      </div>
+      <h3> We take care of more little friends than bunnies!
     </h3>
     <p>
         <i>We have facilities for...</i>
@@ -78,8 +100,23 @@
   <h3>Find a daycare near you</h3>
   <p> 
     <a href= "https://www.google.com/maps" > Explore locations here </a> </p>
-    <footer>
-      <i>Thanks for visiting our site! </i></footer>
+    
+   <!-- Footer -->
+   <footer class="page-footer header-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center-align">
+                <p class="white-text">&copy; 2025 Bunny Daycare. All rights reserved.</p>
+                <div class="col s12 m6">
+                  <h5>Visit Us</h5>
+                  <p>123 Bakery St,<br> Sweet City, SC 12345</p>
+                  <p><i class="material-icons">phone</i> (123) 456-7890</p>
+                  <p><i class="material-icons">email</i> info@hoppyhaven.com</p>
+              </div>
+                <i>Thanks for visiting our site! </i></footer>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
-
