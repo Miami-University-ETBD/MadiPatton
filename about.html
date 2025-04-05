@@ -10,6 +10,8 @@
            height: auto; /* maintain aspect ratio */
        }
     </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
   <header>
     <div class="navbar">
@@ -35,6 +37,33 @@
       <div class="image-container">
         <img src="images/hampster.avif" alt="hampster" class="centered-img">
         </div>
+
+        <h3> Frequentally Asked Questions</h3>
+        <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">add</i>Why not go to a regular kennel?</div>
+              <div class="collapsible-body"><span>Answer...</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">add</i>How much supervision will there be?</div>
+              <div class="collapsible-body"><span>Answer...</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">add</i>How are emergencies delt with?</div>
+              <div class="collapsible-body"><span>Answer...</span></div>
+            </li>
+          </ul>
+          <script>document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+          });
+        
+          // Or with jQuery
+        
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });</script>
+
     <h2>
         We have many locations, <italic>find a bunny daycare near you.</italic>
     </h2>
@@ -84,6 +113,30 @@
           <td>Email: info@hoppyhaven.com | Phone: (123) 456-7890</td>
       </tr>
   </table>
+  <!-- Email Feedback Section -->
+  <div id="feedback-section" class="section container">
+    <h2>Want to join our news letter to hear about our updates, events, and deals? Then sunscribe below!</h2>
+    <form onsubmit="submitEmail(event)">
+        <div class="input-field">
+            <input id="email" type="email" required>
+            <label for="email">Email</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+    </form>
+    <div id="email-response"></div>
+</div>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Check Your email-response</h4>
+    <p id="modal-content-text"></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+      >Close</a
+    >
+  </div>
+</div>
+
  <!-- Footer -->
  <footer class="page-footer header-bg">
     <div class="container">
@@ -101,5 +154,23 @@
         </div>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    // Initialize modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+
+
+    
+    // Function to handle email subscription form submission
+    function submitEmail(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        document.getElementById('email-response').innerText = `You'll hear from us soon at: ${email}`;
+        document.getElementById('email').value = ''; // Clear the input
+    }
+</script>
 </body>
         </html>
