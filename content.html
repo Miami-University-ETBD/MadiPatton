@@ -3,6 +3,14 @@
 <link
 rel="stylesheet" href="styles.css"> </link>
 <title>Bunny Daycare services page</title>
+<style>
+         .centered-img {
+           display: block;
+            margin: 0 auto;
+           width: 50vw; /* 50% of the viewport width */
+           height: auto; /* maintain aspect ratio */
+       }
+ </style>
 </head>
 <header>
   <div class="navbar">
@@ -15,7 +23,7 @@ rel="stylesheet" href="styles.css"> </link>
 </header>
 <body>
   <div class="image-container">
-    <img src="images/Bunnyfood.jpg" alt="bunnyfood" class="shadowed" class="bordered">
+    <img src="images/Bunnyfood.jpg" alt="bunnyfood" class="centered-img">
     </div>
 <blocknote>Find out why you should join our pet caring community from our <loud>range of services and unmatchable prices</loud>.</blocknote>
 <p1> You and your pets have needs and we are here to meet them with our professional care. We have groomers, vets and dietitions who spend all their time making sure your pets are happy and healthy. 
@@ -51,21 +59,21 @@ brushing, nail trimming, and haircuts to keep your pet looking great.</td>
 <li>Ferrets
 </นไ>
 </body>
-<h3>Schedule your pet's next visit</h3>
+<h2>Schedule your pet's next visit</h2>
 <p>Select a location</p>
 <form id="form1">
   <input type="radio" name="youroption" value="Got it, thank you!" id="option1" /> <label for="option1">Columbus, OH</label><br>
   <input type="radio" name="youroption" value="Got it, thank you!" id="option2"/> <label for="option2">Delaware, OH</label><br>
   <input type="radio" name="youroption" value="Got it, thank you!" id="option3"/> <label for="option3">Cleveland, OH</label><br>
-  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Mansfield, OH</label><br>
-  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Dayton, OH</label><br>
-  <input type="radio" name="youroption" value="Got it, thank you!"/> <label for="option4">Toledo, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option4"/> <label for="option4">Mansfield, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option5"/> <label for="option4">Dayton, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option6"/> <label for="option4">Toledo, OH</label><br>
   <input type="submit" value="Submit">
   </form>
   <p id="answer"></p>
                
 
-  <p> Select an appointment time </p>
+  <p> Select an Appointment Time </p>
   <input id="userInput"> <br><br>
 <button onclick="myFunction()">Submit</button>
 <p id="message"></p>
@@ -75,6 +83,24 @@ brushing, nail trimming, and haircuts to keep your pet looking great.</td>
         message.innerHTML = "Your time has ben saved " + userInput.value;
     }
                 </script>
+ 
+            <label for="numberInput">Select a Service:</label>
+                <select id="numberInput" onchange="handleSelection()">
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="1">Over night daycare</option>
+                  <option value="2">Day time care</option>
+                  <option value="3">Clinic visit</option>
+                  <option value="4">Grooming</option>
+                  <option value="5">Consultation</option>
+                </select>
+              
+                <script>
+                  function handleSelection() {
+                    const selectedValue = document.getElementById('numberInput').value;
+                    console.log("You selected:", selectedValue);
+                    // You can use the selectedValue in any other way here
+                  }
+            </script>
 
 
  <!-- Footer -->
@@ -85,7 +111,7 @@ brushing, nail trimming, and haircuts to keep your pet looking great.</td>
               <p class="white-text">&copy; 2025 Bunny Daycare. All rights reserved.</p>
               <div class="col s12 m6">
                 <h5>Visit Us</h5>
-                <p>123 Bakery St,<br> Sweet City, SC 12345</p>
+                <p>123 High St,<br> Columbis, OH 12345</p>
                 <p><i class="material-icons">phone</i> (123) 456-7890</p>
                 <p><i class="material-icons">email</i> info@hoppyhaven.com</p>
             </div>
