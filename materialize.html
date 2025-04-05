@@ -5,7 +5,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Gallery</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <style>
        .header-bg {
            background-color: #f8bbd0; /* Light pink background */
@@ -27,6 +26,19 @@
            width: 50vw; /* 50% of the viewport width */
            height: auto; /* maintain aspect ratio */
        }
+     
+       .carousel {
+      position: relative;
+      width: 500px;
+      margin: auto;
+    }
+
+     .carousel-item {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
     </style>
 </head>
 <body>
@@ -71,6 +83,37 @@
            </div>
        </div>
    </div>
+   <div id="radio-section" class="section container">
+    <h2>Select an animal to view in gallery</h2>
+    <form>
+        <p>
+            <label>
+                <input name="pastry" type="radio" value="Rabbit" onclick="displayPastry()"/>
+                <span>Rabbit</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="pastry" type="radio" value="Hampster" onclick="displayPastry()"/>
+                <span>Hampster</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="pastry" type="radio" value="Gueina Pig" onclick="displayPastry()"/>
+                <span>Gueina Pig</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="pastry" type="radio" value="Other" onclick="displayPastry()"/>
+                <span>Other</span>
+            </label>
+        </p>
+    </form>
+    <div id="pastry-response"></div>
+</div>
+
 
 
        <div class="col s4">
@@ -115,7 +158,27 @@
             </div>
         </div>
     </div>
-  
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="images/inside pens.jpeg"></a>
+        <a class="carousel-item" href="#two!"><img src="images/inside pen.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="images/outside cages.png"></a>
+        <a class="carousel-item" href="#four!"><img src="images/Inside room.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="images/lobby.jpg"></a>
+      </div>
+      <script>document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+      });
+    
+      // Or with jQuery
+    
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+    </script>
+
+
+      
 
    <!-- Contact Section -->
    <div id="contact" class="section section-bg">
@@ -174,5 +237,22 @@
            </div>
        </div>
    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+   <script>
+    // Initialize modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+
+
+    // Function to display selected pastry
+    function displayPastry() {
+        const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+        document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+    }
+</script>
+
 </body>
 </html>
