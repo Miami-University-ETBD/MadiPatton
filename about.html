@@ -1,8 +1,15 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css"> </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Bunny Daycare about page</title>
     <style>
+     
+      body {
+        margin: 100px;
+      }
+      .collapsible-header { background-color: rgb(238, 148, 219);}
+      .collapsible-body {background-color: rgb(202, 173, 230);}
          .centered-img {
            display: block;
             margin: 0 auto;
@@ -55,7 +62,7 @@
           </ul>
           <script>document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, options);
+            var instances = M.Collapsible.init(elems);
           });
         
           // Or with jQuery
