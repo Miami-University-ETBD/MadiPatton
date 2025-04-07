@@ -165,19 +165,7 @@
         <a class="carousel-item" href="#four!"><img src="images/Inside room.jpg"></a>
         <a class="carousel-item" href="#five!"><img src="images/lobby.jpg"></a>
       </div>
-      <script>document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, options);
-      });
-    
-      // Or with jQuery
-    
-      $(document).ready(function(){
-        $('.carousel').carousel();
-      });
-    </script>
-
-
+      
       
 
    <!-- Contact Section -->
@@ -237,6 +225,7 @@
            </div>
        </div>
    </footer>
+  
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  
    <script>
@@ -245,14 +234,26 @@
         var elems = document.querySelectorAll('.modal');
         var instances = M.Modal.init(elems);
     });
-
-
+   
+   
     // Function to display selected pastry
     function displayPastry() {
         const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
         document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
     }
-</script>
-
+   </script>
+   <script>document.addEventListener('DOMContentLoaded', function() {
+       var elems = document.querySelectorAll('.carousel');
+       var instances = M.Carousel.init(elems);
+     });
+   
+     // Or with jQuery
+   
+     $(document).ready(function(){
+       $('.carousel').carousel();
+     });
+   </script>
+   
 </body>
 </html>
+
