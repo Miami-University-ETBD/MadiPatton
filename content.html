@@ -1,47 +1,125 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Bunny Daycare services page</title>
-  </head>
-
-  <body>
-    <h1> More than just a daycare</h1>
-    <blocknote>Find out why you should join our pet caring community from our <loud>range of services and unmatchable prices</loud>.</blocknote>
-    <p1> You and your pets have needs and we are here to meet them with our professional care. We have groomers, vets and dietitions who specilize in small animals.</p1>
-    <h2>Our Pet Daycare Services</h2>
-    <table>
-        <tr>
-            <th><u>Service</u></th>
-            <th><u>Description</u></th>
-            <th><u>Price</u></th>
-        </tr>
-        <tr>
-            <td>Feeding</td>
-            <td>Nutritious meals tailored to your pet's dietary needs, served at scheduled times.</td>
-            <td>$10 per day</td>
-        </tr>
-        <tr>
-            <td>On-Site Vet</td>
-            <td>Professional veterinary services available for health check-ups and emergencies.</td>
-            <td>$25 per visit</td>
-        </tr>
-        <tr>
-            <td>Grooming</td>
-            <td>Bathing, brushing, nail trimming, and haircuts to keep your pet looking great.</td>
-            <td>$30 per session</td>
-        </tr>
-    </table>
-    <p>
-    <i>We have facilities for...</i> </p>
+<head>
+<link
+rel="stylesheet" href="styles.css"> </link>
+<title>Bunny Daycare services page</title>
+<style>
+         .centered-img {
+           display: block;
+            margin: 0 auto;
+           width: 50vw; /* 50% of the viewport width */
+           height: auto; /* maintain aspect ratio */
+       }
+ </style>
+</head>
+<header>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="content.html">Services</a>
+    <a href="materialize.html">Gallery</a>
+    <a href="jquery.html">Interact</a>
+    <a href="bootstrap.html">Survey</a>
+</div>
+<h1> More than just a daycare</h1>
+</header>
+<body>
+  <div class="image-container">
+    <img src="images/Bunnyfood.jpg" alt="bunnyfood" class="centered-img">
+    </div>
+<blocknote>Find out why you should join our pet caring community from our <loud>range of services and unmatchable prices</loud>.</blocknote>
+<p1> You and your pets have needs and we are here to meet them with our professional care. We have groomers, vets and dietitions who spend all their time making sure your pets are happy and healthy. 
+  <h2>Our Pet Daycare Services</h2> 
+  <table>
+  <tr>
+<th><u>Service</u></th> <th><u>Description</u></th> <th><u>Price</u></th>
+</tr>
+<tr>
+<td>Feeding</td>
+<td>Nutritious meals tailored to your pet's dietary needs, served at scheduled times.</td> <td>$10 per day</td>
+</tr>
+<tr>
+<td>On-Site Vet</td>
+<td>Professional veterinary services available for health check-ups and emergencies.</td>
+<td>$25 per visit</td>
+</tr>
+<tr>
+<td>Grooming</td>
+<td>Bathing,
+brushing, nail trimming, and haircuts to keep your pet looking great.</td>
+<td>$30 per session</td>
+</tr>
+</table>
+<p>
+<i>We have facilities for...</i> </p>
 <ul>
-<li>Bunnies
-<li>Hampsters
-  <li>Rats
-    <li>Mice
-      <li>Gerbils
+<li>Bunnies <li>Hampsters
+<li>Rats
+<li>Mice
+<li>Gerbils
 <li>Guinea Pigs
 <li>Ferrets
-</ul>
+</นไ>
 </body>
-<footer>
-    Thanks for visiting our site! </footer>
+<h2>Schedule your pet's next visit</h2>
+<p>Select a location</p>
+<form id="form1">
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option1" /> <label for="option1">Columbus, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option2"/> <label for="option2">Delaware, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option3"/> <label for="option3">Cleveland, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option4"/> <label for="option4">Mansfield, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option5"/> <label for="option4">Dayton, OH</label><br>
+  <input type="radio" name="youroption" value="Got it, thank you!" id="option6"/> <label for="option4">Toledo, OH</label><br>
+  <input type="submit" value="Submit">
+  </form>
+  <p id="answer"></p>
+               
+
+  <p> Select an Appointment Time </p>
+  <input id="userInput"> <br><br>
+<button onclick="myFunction()">Submit</button>
+<p id="message"></p>
+    <script>function myFunction() {
+        let userInput = document.querySelector ("#userInput");
+        let message = document.querySelector ("#message");
+        message.innerHTML = "Your time has ben saved " + userInput.value;
+    }
+                </script>
+ 
+            <label for="numberInput">Select a Service:</label>
+                <select id="numberInput" onchange="handleSelection()">
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="1">Over night daycare</option>
+                  <option value="2">Day time care</option>
+                  <option value="3">Clinic visit</option>
+                  <option value="4">Grooming</option>
+                  <option value="5">Consultation</option>
+                </select>
+              
+                <script>
+                  function handleSelection() {
+                    const selectedValue = document.getElementById('numberInput').value;
+                    console.log("You selected:", selectedValue);
+                    // You can use the selectedValue in any other way here
+                  }
+            </script>
+
+
+ <!-- Footer -->
+ <footer class="page-footer header-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col s12 center-align">
+              <p class="white-text">&copy; 2025 Bunny Daycare. All rights reserved.</p>
+              <div class="col s12 m6">
+                <h5>Visit Us</h5>
+                <p>123 High St,<br> Columbis, OH 12345</p>
+                <p><i class="material-icons">phone</i> (123) 456-7890</p>
+                <p><i class="material-icons">email</i> info@hoppyhaven.com</p>
+            </div>
+              <i>Thanks for visiting our site! </i></footer>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
