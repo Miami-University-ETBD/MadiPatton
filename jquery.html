@@ -5,11 +5,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#h1").hover(function(){
+  $("#p1").hover(function(){
     alert("If you have scheduled with us beofre you can make an appointment on our about page.");
-  },
-  function(){
-    alert("Thank you for making an account with us");
   }); 
 });
 </script>
@@ -33,6 +30,16 @@ $(document).ready(function(){
     });
     </script>
 </head>
+<header>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="content.html">Services</a>
+    <a href="materialize.html">Gallery</a>
+    <a href="jquery.html">Interact</a>
+    <a href="bootstrap.html">Survey</a>
+</div>
+</header>
 <body>
 
 <h1 id="h1">Welcome to Bunny Daycare!</h1>
@@ -48,5 +55,7 @@ Email: <input type="text" name="email">
 <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(208, 143, 237);"></div><br>
 <div id="div2" style="width:80px;height:80px;display:none;background-color:rgb(227, 163, 216);"></div><br>
 <div id="div3" style="width:80px;height:80px;display:none;background-color:rgb(73, 132, 210);"></div>
+
+<p1 id="p1">We look forward to sharing our newest deals, photos, and events with you!</p1>
 </body>
 </html>
